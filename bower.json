@@ -6,7 +6,7 @@
     "ThemePixels <themepixels@gmail.com>"
   ],
   "description": "An enhanced version of some of the form elements using only css",
-  "main": "tpx-forms.css",
+  "main": "tpxforms.css",
   "keywords": [
     "checkbox",
     "radio",
