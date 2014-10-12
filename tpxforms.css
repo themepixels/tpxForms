@@ -1,0 +1,78 @@
+/*!
+ * TPX Forms
+ * Released under MIT. Copyright 2014 Mienard Lumaad
+ * http://ui.themepixels.com/tpxForms
+ *
+ * Github Repository: https://github.com/themepixels/tpxForms
+ */
+.tpx-radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 21px;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+.tpx-radio span {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-sizing: border-box;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.tpx-radio span:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  display: none;
+}
+.tpx-radio > input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+}
+.tpx-radio > input[type="radio"]:checked + span {
+  border-color: #333;
+  background-color: #ddd;
+}
+.tpx-radio > input[type="radio"]:checked + span:before {
+  display: block;
+}
+.tpx-radio-sm {
+  padding-left: 26px;
+}
+.tpx-radio-sm span {
+  width: 16px;
+  height: 16px;
+}
+.tpx-radio-sm span:before {
+  width: 8px;
+  height: 8px;
+}
+.tpx-radio-xs {
+  padding-left: 24px;
+  line-height: 18px;
+  font-size: 14px;
+}
+.tpx-radio-xs span {
+  width: 14px;
+  height: 14px;
+}
+.tpx-radio-xs span:before {
+  width: 6px;
+  height: 6px;
+}

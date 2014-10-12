@@ -1,0 +1,103 @@
+/*!
+ * TPX Forms
+ * Released under MIT. Copyright 2014 Mienard Lumaad
+ * http://ui.themepixels.com/tpxForms
+ *
+ * Github Repository: https://github.com/themepixels/tpxForms
+ */
+
+
+// Variables
+
+@indicator-size: 18px;
+
+// Mixins
+
+.radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+
+// Radio Button
+
+.tpx-radio {
+  display: inline-block;
+  position: relative;
+  padding-left: @indicator-size + 10;
+  line-height: 21px;
+  margin-bottom: 5px;
+  font-weight: 300;
+
+  span {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: @indicator-size;
+    height: @indicator-size;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box;
+    .radius(50px);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: @indicator-size - 8;
+      height: @indicator-size - 8;
+      background-color: #333;
+      .radius(50px);
+      display: none;
+    }
+  }
+
+  > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+
+    &:checked {
+      + span {
+        border-color: #333;
+        background-color: #ddd;
+        &:before {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.tpx-radio-sm {
+  padding-left: (@indicator-size - 2) + 10;
+
+  span {
+    width: @indicator-size - 2;
+    height: @indicator-size - 2;
+
+    &:before {
+      width: (@indicator-size - 2) - 8;
+      height: (@indicator-size - 2) - 8;
+    }
+  }
+}
+
+.tpx-radio-xs {
+  padding-left: (@indicator-size - 4) + 10;
+  line-height: 18px;
+  font-size: 14px;
+
+  span {
+    width: @indicator-size - 4;
+    height: @indicator-size - 4;
+
+    &:before {
+      width: (@indicator-size - 4) - 8;
+      height: (@indicator-size - 4) - 8;
+    }
+  }
+}

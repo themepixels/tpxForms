@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>TPX Forms</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/default.min.css">
+  <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+
+  <link rel="stylesheet" href="docs.css">
+  <link rel="stylesheet" href="tpxforms.min.css">
+
+</head>
+
+<body>
+
+<section>
+  <div class="mainpanel">
+    <h1 class="tpx-logo">tpx<span>Forms</span></h1>
+    <h3 class="tpx-desc">An enhanced version of some of the html form elements written only in css.</h3>
+    <p>Created by: <a href="http://themepixels.com/">@themepixels</a>
+
+    <p class="tpx-social">
+      <a href="https://github.com/themepixels/tpxforms" class="github"><i class="fa fa-github"></i></a>
+      <a href="http://twitter.com/themepixels" class="twitter"><i class="fa fa-twitter"></i></a>
+      <a href="https://dribbble.com/themepixels" class="dribbble"><i class="fa fa-dribbble"></i></a>
+      <a href="https://www.behance.net/themepixels" class="behance"><i class="fa fa-behance"></i></a>
+    </p>
+
+    <hr>
+
+    <h2 class="sectitle">Radios</h2>
+    <p class="secdesc">Use the available syntax below to use the enhanced radio box.</p>
+
+    <pre><code class="html">&lt;label class="tpx-radio"&gt;
+  &lt;input type="radio"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  Default Radio
+&lt;/label&gt;</code></pre>
+
+    <p>To create a custom design, we use the <code>&lt;span&gt;</code> element as an indicator to the input radio which is hidden within the <code>&lt;label&gt;</code>.</p>
+
+    <h4 class="subtitle">Examples:</h4>
+    <div>
+      <label class="tpx-radio">
+        <input type="radio" name="radio1" value="1">
+        <span></span>
+        Default Radio 1
+      </label>
+      <label class="tpx-radio">
+        <input type="radio" name="radio1" value="2">
+        <span></span>
+        Default Radio 2
+      </label>
+      <label class="tpx-radio">
+        <input type="radio" name="radio1" value="3">
+        <span></span>
+        Default Radio 3
+      </label>
+    </div>
+
+  </div>
+</section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

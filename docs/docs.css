@@ -1,0 +1,100 @@
+/**
+ * Start of docs styles
+**/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #444;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+a {
+  color: #066EFB;
+  text-decoration: none;
+}
+
+a:hover { color: #0766e7; }
+
+p { line-height: 23px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px dotted #ddd;
+  height: 1px;
+  margin: 40px 0;
+}
+
+section { padding: 20px; }
+
+.mainpanel {
+  max-width: 720px;
+  margin: auto;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.tpx-logo {
+  font-size: 50px;
+  color: #066efb;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.tpx-logo span {
+  color: #000;
+  font-weight: 300;
+}
+
+.tpx-desc {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.tpx-social {
+  font-size: 32px;
+  margin: 0;
+}
+
+.tpx-social .github { color: #333; }
+.tpx-social .github:hover { color: #000; }
+.tpx-social .twitter { color: #1AB2E8; }
+.tpx-social .twitter:hover { color: #189fcf; }
+.tpx-social .dribbble { color: #C32361; }
+.tpx-social .dribbble:hover { color: #ad1e55; }
+
+.sectitle {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.secdesc { margin-top: 0; }
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  color: #333;
+}
+
+.tpx-radio {
+  margin-right: 20px;
+}
