@@ -7,12 +7,27 @@
  */
 
 
-// Variables
+// Radio Variables
+// Note: @indicator-radio-size and @radio-dot-size must be even numbers
+@indicator-radio-size:      18px;
+@radio-dot-size:            10px;
 
-@indicator-size: 18px;
+@indicator-border-width:    1px;
 
-// Mixins
+// Do not touch this unless you know what you're doing. :)
+@radio-dot-position:        (@indicator-radio-size - ((@indicator-border-width * 2px) + @radio-dot-size)) / 2;
 
+// Space between indicator and the text label
+@indicator-space:           10px;
+
+// Color Variables
+@default-color:             #333;
+@primary-color:             #3282c7;
+@success-color:             #1a9d13;
+@warning-color:             #eda43d;
+@danger-color:              #d94843;
+
+// Common Mixins
 .radius(@radius) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
@@ -25,19 +40,20 @@
 .tpx-radio {
   display: inline-block;
   position: relative;
-  padding-left: @indicator-size + 10;
+  padding-left: @indicator-radio-size + @indicator-space;
   line-height: 21px;
   margin-bottom: 5px;
   font-weight: 300;
 
   span {
     position: absolute;
-    top: 2px;
     left: 0;
-    width: @indicator-size;
-    height: @indicator-size;
+    top: 50%;
+    margin-top: -@indicator-radio-size / 2px;
+    width: @indicator-radio-size;
+    height: @indicator-radio-size;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: @indicator-border-width solid #ccc;
     background-color: #fff;
     box-sizing: border-box;
     .radius(50px);
@@ -45,59 +61,113 @@
     &:before {
       content: '';
       position: absolute;
-      top: 3px;
-      left: 3px;
-      width: @indicator-size - 8;
-      height: @indicator-size - 8;
-      background-color: #333;
+      top: @radio-dot-position;
+      left: @radio-dot-position;
+      width: @radio-dot-size;
+      height: @radio-dot-size;
+      background-color: @default-color;
+      box-sizing: border-box;
       .radius(50px);
       display: none;
     }
   }
 
-  > input[type="radio"] {
+  input[type="radio"] {
     position: absolute;
     opacity: 0;
     margin: 0;
 
     &:checked {
       + span {
-        border-color: #333;
-        background-color: #ddd;
+        border-color: @default-color;
+        background-color: #eee;
         &:before {
           display: block;
+        }
+      }
+    }
+
+    &[disabled] {
+      + span {
+        opacity: .5;
+      }
+    }
+  }
+
+}
+
+// Inversed color
+
+.tpx-radio-inverse {
+  > input[type="radio"] {
+    &:checked {
+      + span {
+        border-color: @default-color;
+        background-color: @default-color;
+
+        &:before {
+          background-color: #fff;
         }
       }
     }
   }
 }
 
-.tpx-radio-sm {
-  padding-left: (@indicator-size - 2) + 10;
 
-  span {
-    width: @indicator-size - 2;
-    height: @indicator-size - 2;
+// Button Sizes Mixin
+.radio-sizes(@selector, @size) {
+  .@{selector} {
+    padding-left: @size + @indicator-space;
 
-    &:before {
-      width: (@indicator-size - 2) - 8;
-      height: (@indicator-size - 2) - 8;
+    span {
+      width: @size;
+      height: @size;
+      margin-top: -@size / 2px;
+
+      &:before {
+        width: @size - 8px;
+        height: @size - 8px;
+      }
     }
   }
 }
 
-.tpx-radio-xs {
-  padding-left: (@indicator-size - 4) + 10;
-  line-height: 18px;
-  font-size: 14px;
+.radio-sizes(tpx-radio-lg, @indicator-radio-size + 4px);  // Large
+.radio-sizes(tpx-radio-sm, @indicator-radio-size - 2px);  // Small
+.radio-sizes(tpx-radio-xs, @indicator-radio-size - 4px);  // Extra Small
 
-  span {
-    width: @indicator-size - 4;
-    height: @indicator-size - 4;
 
-    &:before {
-      width: (@indicator-size - 4) - 8;
-      height: (@indicator-size - 4) - 8;
+// Colored Radio Mixin
+.colored-radio(@selector, @color) {
+  .@{selector} {
+
+    input[type="radio"] {
+      &:checked {
+        + span {
+          border-color: @color;
+        }
+      }
+    }
+    span {
+      border-color: @color;
+
+      &:before {
+        background-color: @color;
+      }
+    }
+    &.tpx-radio-inverse {
+      input[type="radio"] {
+        &:checked {
+          + span {
+            background-color: @color
+          }
+        }
+      }
     }
   }
 }
+
+.colored-radio(tpx-radio-primary, @primary-color);
+.colored-radio(tpx-radio-success, @success-color);
+.colored-radio(tpx-radio-warning, @warning-color);
+.colored-radio(tpx-radio-danger, @danger-color);

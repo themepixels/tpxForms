@@ -7,8 +7,9 @@
 }
 
 body {
-  background-color: #333;
+  margin: 0;
   color: #444;
+  background-color: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -25,9 +26,10 @@ p { line-height: 23px; }
 
 pre {
   background-color: #eee;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ddd;
   border-radius: 3px;
+  font-size: 13px;
 }
 
 hr {
@@ -37,17 +39,18 @@ hr {
   margin: 40px 0;
 }
 
-section { padding: 20px; }
+.code {
+  color: #D54950;
+  font-weight: 400;
+}
 
 .mainpanel {
-  max-width: 720px;
+  max-width: 1024px;
   margin: auto;
   padding: 20px 30px;
   box-sizing: border-box;
-  background-color: #fff;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .tpx-logo {
@@ -84,17 +87,40 @@ section { padding: 20px; }
   font-size: 36px;
   font-weight: 300;
   margin-bottom: 15px;
-  color: #333;
+  color: #000;
 }
 
 .secdesc { margin-top: 0; }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
-  color: #333;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.subdesc {
+  color: #666;
+  font-size: 14px;
+  margin: 2px 0 20px;
 }
 
 .tpx-radio {
   margin-right: 20px;
+}
+
+.inline-block { display: inline-block; }
+
+.download-btn {
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  padding: 12px 20px;
+  border: 2px solid #066EFB;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.tpx-radio-xs {
+  font-size: 14px;
 }

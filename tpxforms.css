@@ -15,12 +15,13 @@
 }
 .tpx-radio span {
   position: absolute;
-  top: 2px;
   left: 0;
+  top: 50%;
+  margin-top: -9px;
   width: 18px;
   height: 18px;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   background-color: #fff;
   box-sizing: border-box;
   -webkit-border-radius: 50px;
@@ -34,23 +35,46 @@
   left: 3px;
   width: 10px;
   height: 10px;
-  background-color: #333;
+  background-color: #333333;
+  box-sizing: border-box;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
   display: none;
 }
-.tpx-radio > input[type="radio"] {
+.tpx-radio input[type="radio"] {
   position: absolute;
   opacity: 0;
   margin: 0;
 }
-.tpx-radio > input[type="radio"]:checked + span {
-  border-color: #333;
-  background-color: #ddd;
+.tpx-radio input[type="radio"]:checked + span {
+  border-color: #333333;
+  background-color: #eee;
 }
-.tpx-radio > input[type="radio"]:checked + span:before {
+.tpx-radio input[type="radio"]:checked + span:before {
   display: block;
+}
+.tpx-radio input[type="radio"][disabled] + span {
+  opacity: .5;
+}
+.tpx-radio-inverse > input[type="radio"]:checked + span {
+  border-color: #333333;
+  background-color: #333333;
+}
+.tpx-radio-inverse > input[type="radio"]:checked + span:before {
+  background-color: #fff;
+}
+.tpx-radio-lg {
+  padding-left: 32px;
+}
+.tpx-radio-lg span {
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+}
+.tpx-radio-lg span:before {
+  width: 14px;
+  height: 14px;
 }
 .tpx-radio-sm {
   padding-left: 26px;
@@ -58,6 +82,7 @@
 .tpx-radio-sm span {
   width: 16px;
   height: 16px;
+  margin-top: -8px;
 }
 .tpx-radio-sm span:before {
   width: 8px;
@@ -65,14 +90,61 @@
 }
 .tpx-radio-xs {
   padding-left: 24px;
-  line-height: 18px;
-  font-size: 14px;
 }
 .tpx-radio-xs span {
   width: 14px;
   height: 14px;
+  margin-top: -7px;
 }
 .tpx-radio-xs span:before {
   width: 6px;
   height: 6px;
+}
+.tpx-radio-primary input[type="radio"]:checked + span {
+  border-color: #3282c7;
+}
+.tpx-radio-primary span {
+  border-color: #3282c7;
+}
+.tpx-radio-primary span:before {
+  background-color: #3282c7;
+}
+.tpx-radio-primary.tpx-radio-inverse input[type="radio"]:checked + span {
+  background-color: #3282c7;
+}
+.tpx-radio-success input[type="radio"]:checked + span {
+  border-color: #1a9d13;
+}
+.tpx-radio-success span {
+  border-color: #1a9d13;
+}
+.tpx-radio-success span:before {
+  background-color: #1a9d13;
+}
+.tpx-radio-success.tpx-radio-inverse input[type="radio"]:checked + span {
+  background-color: #1a9d13;
+}
+.tpx-radio-warning input[type="radio"]:checked + span {
+  border-color: #eda43d;
+}
+.tpx-radio-warning span {
+  border-color: #eda43d;
+}
+.tpx-radio-warning span:before {
+  background-color: #eda43d;
+}
+.tpx-radio-warning.tpx-radio-inverse input[type="radio"]:checked + span {
+  background-color: #eda43d;
+}
+.tpx-radio-danger input[type="radio"]:checked + span {
+  border-color: #d94843;
+}
+.tpx-radio-danger span {
+  border-color: #d94843;
+}
+.tpx-radio-danger span:before {
+  background-color: #d94843;
+}
+.tpx-radio-danger.tpx-radio-inverse input[type="radio"]:checked + span {
+  background-color: #d94843;
 }

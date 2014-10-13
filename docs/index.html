@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>TPX Forms</title>
+  <title>tpxForms</title>
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/default.min.css">
@@ -34,6 +34,16 @@
 
     <hr>
 
+    <div class="inline-block">
+      <a href="" class="download-btn">Download CSS</a>
+      <small>Compiled and minified CSS</small>
+    </div>
+
+    <div class="inline-block">
+      <a href="" class="download-btn">Download CSS</a>
+      <small>Includes less files and docs</small>
+    </div>
+
     <h2 class="sectitle">Radios</h2>
     <p class="secdesc">Use the available syntax below to use the enhanced radio box.</p>
 
@@ -45,24 +55,183 @@
 
     <p>To create a custom design, we use the <code>&lt;span&gt;</code> element as an indicator to the input radio which is hidden within the <code>&lt;label&gt;</code>.</p>
 
-    <h4 class="subtitle">Examples:</h4>
+    <hr>
+
+    <h4 class="subtitle">Default Radio</h4>
+    <p class="subdesc">Start with this basic radio by copying the syntax given above.</p>
+
     <div>
       <label class="tpx-radio">
-        <input type="radio" name="radio1" value="1">
+        <input type="radio" name="radio1" value="1" checked>
         <span></span>
-        Default Radio 1
+        Default Radio
       </label>
       <label class="tpx-radio">
         <input type="radio" name="radio1" value="2">
         <span></span>
-        Default Radio 2
-      </label>
-      <label class="tpx-radio">
-        <input type="radio" name="radio1" value="3">
-        <span></span>
-        Default Radio 3
+        Default Radio
       </label>
     </div>
+
+    <br>
+    <h4 class="subtitle">Inversed Radio</h4>
+    <p class="subdesc">Create an inversed color of the default radio.</p>
+
+    <div>
+      <label class="tpx-radio tpx-radio-inverse">
+        <input type="radio" name="radio2" value="1" checked>
+        <span></span>
+        Inversed Radio
+      </label>
+      <label class="tpx-radio tpx-radio-inverse">
+        <input type="radio" name="radio2" value="2">
+        <span></span>
+        Inversed Radio
+      </label>
+    </div>
+    <pre><code class="html">&lt;label class="tpx-radio tpx-inverse"&gt;...&lt;/label&gt;</code></pre>
+
+    <br>
+    <h4 class="subtitle">Radio Sizes</h4>
+    <p class="subdesc">Make larger or smaller radio by adding <span class="code">.tpx-radio-sm</span>, <span class="code">.tpx-radio-xs</span>, or <span class="code">.tpx-radio-lg</span< for additional sizes.</p>
+
+    <div>
+      <label class="tpx-radio tpx-radio-lg">
+        <input type="radio" name="radio3" value="1" checked>
+        <span></span>
+        Radio Large
+      </label>
+      <label class="tpx-radio tpx-radio-lg">
+        <input type="radio" name="radio3" value="2">
+        <span></span>
+        Radio Large
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-lg"&gt;...&lt;/label&gt;</code></pre>
+
+    <br>
+
+    <div>
+      <label class="tpx-radio tpx-radio-sm">
+        <input type="radio" name="radio4" value="1" checked>
+        <span></span>
+        Radio Small
+      </label>
+      <label class="tpx-radio tpx-radio-sm">
+        <input type="radio" name="radio4" value="2">
+        <span></span>
+        Radio Small
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-sm"&gt;...&lt;/label&gt;</code></pre>
+
+    <br>
+
+    <div>
+      <label class="tpx-radio tpx-radio-xs">
+        <input type="radio" name="radio5" value="1" checked>
+        <span></span>
+        Radio Extra Small
+      </label>
+      <label class="tpx-radio tpx-radio-xs">
+        <input type="radio" name="radio5" value="2">
+        <span></span>
+        Radio Extra Small
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-xs"&gt;...&lt;/label&gt;</code></pre>
+
+    <br>
+    <h4 class="subtitle">Radio Disabled</h4>
+    <p class="subdesc">Add the <span class="code">disabled</span> attribute to <span class="code">&lt;input&gt;</span> within the label.</p>
+
+    <div>
+      <label class="tpx-radio">
+        <input type="radio" name="radio6" value="1" checked disabled>
+        <span></span>
+        Disabled Radio
+      </label>
+      <label class="tpx-radio">
+        <input type="radio" name="radio6" value="2" disabled>
+        <span></span>
+        Disabled Radio
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;input type="radio" disabled&gt;</code></pre>
+
+    <br>
+    <h4 class="subtitle">Colored Radio</h4>
+    <p class="subdesc">Use any of the available radio classes to create a colored radio button..</p>
+
+    <div>
+      <label class="tpx-radio tpx-radio-primary">
+        <input type="radio" name="radio7" value="1" checked>
+        <span></span>
+        Primary Radio
+      </label>
+      <label class="tpx-radio tpx-radio-inverse tpx-radio-primary">
+        <input type="radio" name="radio7" value="2">
+        <span></span>
+        Primary Radio Inverse
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-primary"&gt;...&lt;/label&gt;
+&lt;label class="tpx-radio tpx-radio-primary tpx-radio-inverse"&gt;...&lt;/label&gt;</code></pre>
+
+    <div>
+      <label class="tpx-radio tpx-radio-success">
+        <input type="radio" name="radio8" value="1" checked>
+        <span></span>
+        Success Radio
+      </label>
+      <label class="tpx-radio tpx-radio-inverse tpx-radio-success">
+        <input type="radio" name="radio8" value="2">
+        <span></span>
+        Success Radio Inverse
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-success"&gt;...&lt;/label&gt;
+&lt;label class="tpx-radio tpx-radio-success tpx-radio-inverse"&gt;...&lt;/label&gt;</code></pre>
+
+    <div>
+      <label class="tpx-radio tpx-radio-warning">
+        <input type="radio" name="radio9" value="1" checked>
+        <span></span>
+        Warning Radio
+      </label>
+      <label class="tpx-radio tpx-radio-inverse tpx-radio-warning">
+        <input type="radio" name="radio9" value="2">
+        <span></span>
+        Warning Radio Inverse
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-warning"&gt;...&lt;/label&gt;
+&lt;label class="tpx-radio tpx-radio-warning tpx-radio-inverse"&gt;...&lt;/label&gt;</code></pre>
+
+    <div>
+      <label class="tpx-radio tpx-radio-danger">
+        <input type="radio" name="radio10" value="1" checked>
+        <span></span>
+        Danger Radio
+      </label>
+      <label class="tpx-radio tpx-radio-inverse tpx-radio-danger">
+        <input type="radio" name="radio10" value="2">
+        <span></span>
+        Danger Radio Inverse
+      </label>
+    </div>
+
+    <pre><code class="html">&lt;label class="tpx-radio tpx-radio-danger"&gt;...&lt;/label&gt;
+&lt;label class="tpx-radio tpx-radio-danger tpx-radio-inverse"&gt;...&lt;/label&gt;</code></pre>
+
+
 
   </div>
 </section>
