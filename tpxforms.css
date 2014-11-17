@@ -173,6 +173,7 @@
   line-height: 21px;
   margin-bottom: 5px;
   font-weight: 300;
+  -webkit-user-select: none;
 }
 .tpx-checkbox span {
   position: absolute;

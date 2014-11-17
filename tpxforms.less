@@ -48,6 +48,7 @@
 @warning-color:             #eda43d;
 @danger-color:              #d94843;
 
+
 // Common Mixins
 .radius(@radius) {
   -webkit-border-radius: @radius;
@@ -199,6 +200,7 @@
   line-height: 21px;
   margin-bottom: 5px;
   font-weight: 300;
+  -webkit-user-select: none;
 
   span {
     position: absolute;
@@ -292,7 +294,7 @@
 .checkbox-sizes(tpx-checkbox-xs, @indicator-checkbox-size - 4px, 22px);  // Extra Small
 
 
-// Colored Radio Mixin
+// Colored Radio Mixins
 .colored-checkbox(@selector, @color) {
   .@{selector} {
 
